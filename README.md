@@ -13,7 +13,7 @@ Hands-on workshop exploring the next generation of cloud-native development on O
    - Dev mode with live reload
    - JVM vs Native compilation (GraalVM)
    - Container-optimized builds
-   
+
 2. **Deploying on OpenShift** — From source to running pods
    - Binary builds with `oc new-build`
    - Native image deployment
@@ -24,6 +24,11 @@ Hands-on workshop exploring the next generation of cloud-native development on O
    - Tasks and TaskRuns
    - Pipeline composition
    - CLI usage with `tkn`
+
+## Related Repository
+
+The Quarkus demo application used in this workshop is available as a standalone project:
+**[quarkus-demo-app](https://github.com/jefrnc/quarkus-demo-app)** — Minimal Quarkus REST API used for container deployment demos on OpenShift and Kubernetes.
 
 ## Quick Start: Quarkus
 
@@ -92,10 +97,18 @@ tkn task logs echo-hello-world
 ## Repository Structure
 
 ```
-workshop-ocp-tekton/
+openshift-tekton-workshop/
 ├── quarkus-started/    # Quarkus demo application
 ├── tekton/             # Tekton task and pipeline definitions
+│   ├── task-helloworld.yaml
+│   ├── pipeline-basic.yaml
+│   ├── taskrun.yaml
+│   └── demo-mvn/      # Maven build pipeline
 ├── tekton-php/         # Tekton pipeline for PHP apps
+│   ├── pipeline.yaml
+│   ├── resources.yaml
+│   ├── imagestream.yaml
+│   └── setup.sh
 └── README.md
 ```
 

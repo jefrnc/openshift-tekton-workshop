@@ -1,8 +1,0 @@
-apiVersion: v1
-kind: Secret
-metadata:
-  name: basic-user-pass
-type: kubernetes.io/basic-auth
-stringData:
-  username: jsfrnc
-  password: 31e76892-8f79-4004-86f5-9b588aed0475
